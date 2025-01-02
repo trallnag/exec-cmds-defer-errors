@@ -17,12 +17,12 @@ Pick a name for the new release. It must follow
 VERSION=1.0.1
 ```
 
-Bump the version constants in [`pyproject.toml`](pyproject.toml) and [`src/{{
-script_name }}.py`](src/{{ script_name }}.py):
+Bump the version constants in [`pyproject.toml`](pyproject.toml) and
+[`src/exec_cmds_defer_errors.py`](src/exec_cmds_defer_errors.py):
 
 ```sh
 sed -i "s/^version = \".*\"/version = \"$VERSION\"/" pyproject.toml
-sed -i "s/^VERSION = \".*\"/VERSION = \"$VERSION\"/" src/{{ script_name }}.py
+sed -i "s/^VERSION = \".*\"/VERSION = \"$VERSION\"/" src/exec_cmds_defer_errors.py
 uv sync
 ```
 
@@ -51,9 +51,9 @@ Push changes:
 git push origin master
 ```
 
-Check [workflow runs](https://github.com/trallnag/{{ repo_name
-}}/actions?query=branch%3Amaster) in GitHub Actions and ensure everything is
-fine.
+Check
+[workflow runs](https://github.com/trallnag/exec-cmds-defer-errors/actions?query=branch%3Amaster)
+in GitHub Actions and ensure everything is fine.
 
 Tag the latest commit with an annotated and signed tag:
 
@@ -75,14 +75,13 @@ git push origin v$VERSION
 ```
 
 This triggers the release workflow which will build binaries, build and push
-container images, and draft a GitHub release. Monitor the [release workflow
-run](https://github.com/trallnag/{{ repo_name
-}}/actions/workflows/release.yaml).
+container images, and draft a GitHub release. Monitor the
+[release workflow run](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml).
 
 ## Wrap up
 
 Go to the release page of this project on GitHub
-[here](https://github.com/trallnag/{{ repo_name }}/releases) and review the
-automatically created release draft.
+[here](https://github.com/trallnag/exec-cmds-defer-errors/releases) and review
+the automatically created release draft.
 
 Publish the draft.
