@@ -1,3 +1,8 @@
+[![status](https://img.shields.io/badge/status-active-brightgreen)](#project-status)
+[![release](https://img.shields.io/github/v/release/trallnag/exec-cmds-defer-errors)](https://github.com/trallnag/exec-cmds-defer-errors/releases)
+[![ci](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/ci.yaml?label=ci)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/ci.yaml)
+[![release](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/release.yaml?label=release)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml)
+
 # `exec_cmds_defer_errors.py`
 
 Small Python script that executes given commands commands and defers errors.
@@ -17,6 +22,11 @@ python exec_cmds_defer_errors.py \
 The output will look like this:
 
 ![screenshot.png](assets/screenshot.png)
+
+## Project status
+
+The project is maintained by me, [trallnag](https://github.com/trallnag), and I
+am interested in keeping it alive as I am actively using it.
 
 ## Versioning
 
