@@ -25,7 +25,7 @@ import sys
 from argparse import ArgumentParser
 from dataclasses import dataclass
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 ANSI_RED = "\033[31m"
 ANSI_GREEN = "\033[32m"
