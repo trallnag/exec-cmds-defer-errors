@@ -21,6 +21,7 @@
 #
 
 import subprocess
+import sys
 from argparse import ArgumentParser
 from dataclasses import dataclass
 
@@ -34,6 +35,8 @@ ANSI_RESET = "\033[0m"
 
 @dataclass
 class CmdExecErrorInfo:
+    """Information about a command execution error."""
+
     cmd_index: int
     cmd_short: str
     exit_code: int
@@ -79,8 +82,8 @@ if __name__ == "__main__":
         print(f"{ANSI_BLUE}Executing command {index + 1}{ANSI_RESET}...")
         print(f"{ANSI_BLUE}{command.strip()}{ANSI_RESET}")
 
-        completed_process = subprocess.run(command, shell=True, check=False)
-
+        # Rule S602 disabled as running arbitrary code in shell is intended here.
+        completed_process = subprocess.run(command, shell=True, check=False)  # noqa: S602
         if completed_process.returncode == 0:
             print(
                 f"{ANSI_GREEN}Executed command {index + 1} "
@@ -92,10 +95,12 @@ if __name__ == "__main__":
                 f"failed with exit code {completed_process.returncode}.{ANSI_RESET}"
             )
 
-            if len(command) > 30:
-                cmd_short = f"{command[:30]}..."
-            else:
-                cmd_short = command
+            cut_off_limit = 30
+            cmd_short = (
+                f"{command[:cut_off_limit]}..."
+                if len(command) > cut_off_limit
+                else command
+            )
 
             cmd_short = cmd_short.replace("\r\n", " ").replace("\n", " ")
 
@@ -113,7 +118,7 @@ if __name__ == "__main__":
             f"executed successfully.{ANSI_RESET}"
         )
 
-        exit(0)
+        sys.exit(0)
     else:
         print(
             f"{ANSI_RED}{len(cmd_exec_errors)} out of "
@@ -127,4 +132,4 @@ if __name__ == "__main__":
                 f"{cmd_exec_error.cmd_short}{ANSI_RESET}"
             )
 
-        exit(1)
+        sys.exit(1)
