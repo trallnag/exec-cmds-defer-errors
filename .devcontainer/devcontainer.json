@@ -1,0 +1,29 @@
+{
+  "name": "exec-cmds-defer-errors",
+
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "dockerComposeFile": "docker-compose.yaml",
+
+  "service": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Tyriar.sort-lines",
+        "charliermarsh.ruff",
+        "mhutchie.git-graph",
+        "ms-python.python",
+        "tamasfe.even-better-toml",
+        "task.vscode-task",
+      ]
+    }
+  },
+
+  "postCreateCommand": {
+    "fixVolumePreCommitCache": "sudo chown -R vscode:vscode /home/vscode/.cache/pre-commit",
+    "fixVolumeUvCache": "sudo chown -R vscode:vscode /home/vscode/.cache/uv"
+  },
+
+  "postStartCommand": "task init",
+}
