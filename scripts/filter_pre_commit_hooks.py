@@ -122,10 +122,10 @@ if __name__ == "__main__":
     else:
         # Validate that all filters are valid tags.
         regex = re.compile(r"^[a-z0-9]+$")
-        for filterv in args.filters:
-            if not regex.match(filterv):
+        for filter_value in args.filters:
+            if not regex.match(filter_value):
                 parser.error(
-                    f"Invalid filter value: '{filterv}'. "
+                    f"Invalid filter value: '{filter_value}'. "
                     f"Must match regex: '{regex.pattern}'.",
                 )
 
