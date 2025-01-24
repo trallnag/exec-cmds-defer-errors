@@ -1,7 +1,7 @@
 {
   "name": "exec-cmds-defer-errors",
 
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspaces/exec-cmds-defer-errors",
 
   "dockerComposeFile": "docker-compose.yaml",
 
@@ -21,6 +21,7 @@
   },
 
   "postCreateCommand": {
+    "fixVolumeVenv": "sudo chown -R vscode:vscode /workspaces/exec-cmds-defer-errors/.venv",
     "fixVolumePreCommitCache": "sudo chown -R vscode:vscode /home/vscode/.cache/pre-commit",
     "fixVolumeUvCache": "sudo chown -R vscode:vscode /home/vscode/.cache/uv"
   },
