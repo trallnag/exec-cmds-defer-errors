@@ -4,21 +4,37 @@ name = "exec-cmds-defer-errors"
 
 version = "1.0.1"
 
-requires-python = ">=3.9"
+requires-python = ">= 3.12"
+
+dependencies = [
+  "click == 8.1.8",
+]
 
 [dependency-groups]
 
 dev = [
-  "mypy>=1.14.1",
-  "pytest>=8.3.4",
-  "ruff>=0.8.4",
+  "mypy >= 1.14.1",
+  "pytest-cov >= 6.0.0",
+  "pytest >= 8.3.4",
+  "ruff >= 0.8.4",
 ]
+
+[build-system]
+
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.uv]
 
-package = false
+package = true
+
+[tool.hatch.build.targets.wheel]
+
+only-include = ["src"]
 
 [tool.ruff]
+
+cache-dir = ".cache/ruff"
 
 exclude = [
   "scripts/filter_pre_commit_hooks.py",
@@ -30,6 +46,7 @@ exclude = [
 select = ["ALL"]
 
 ignore = [
+  "B026",    # Star-arg unpacking after a keyword arg is fine.
   "COM812",  # Redundant rule. Ruff recommends disabling it.
   "D100",    # Missing docstring in public module is fine.
   "D104",    # Missing docstring in public package is fine.
@@ -38,9 +55,9 @@ ignore = [
   "D203",    # Blank line before docstring not required.
   "D205",    # Blank line between summary and desc not required.
   "D212",    # First line in doc string must not be used.
-  "INP001",  # Implicit namespace packages are fine.
+  "EXE003",  # Python script with uv shebang is fine.
+  "INP001",  # Implicit namespace package is fine.
   "ISC001",  # Redundant rule. Ruff recommends disabling it.
-  "T201",    # Print statements are fine.
 ]
 
 [tool.ruff.lint.extend-per-file-ignores]
@@ -52,8 +69,26 @@ ignore = [
 
 [tool.mypy]
 
+cache_dir = ".cache/mypy"
+
 disallow_untyped_defs = true
 disallow_any_unimported = true
 no_implicit_optional = true
 check_untyped_defs = true
 warn_unused_ignores = true
+
+[tool.pytest]
+
+cache_dir = ".cache/pytest"
+
+[tool.pytest.ini_options]
+
+pythonpath = ["src"]
+
+[tool.coverage.run]
+
+branch = true
+
+source = ["src"]
+
+omit = ["tests/*"]

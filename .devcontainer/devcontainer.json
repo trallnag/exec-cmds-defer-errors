@@ -9,22 +9,46 @@
 
   "customizations": {
     "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        }
+      },
+
       "extensions": [
+        "EditorConfig.EditorConfig",
+        "Gerrnperl.outline-map",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github",
+        "Gruntfuggly.todo-tree",
         "Tyriar.sort-lines",
+        "VisualStudioExptTeam.vscodeintellicode",
         "charliermarsh.ruff",
+        "donjayamanne.githistory",
+        "github.vscode-github-actions",
         "mhutchie.git-graph",
+        "mkhl.shfmt",
+        "ms-python.mypy-type-checker",
         "ms-python.python",
+        "nefrob.vscode-just-syntax",
+        "redhat.vscode-yaml",
         "tamasfe.even-better-toml",
-        "task.vscode-task",
+        "timonwong.shellcheck",
+        "tomoki1207.selectline-statusbar",
+        "waderyan.gitblame",
+        "yzhang.markdown-all-in-one"
       ]
     }
   },
 
   "postCreateCommand": {
-    "fixVolumeVenv": "sudo chown -R vscode:vscode /workspaces/exec-cmds-defer-errors/.venv",
-    "fixVolumePreCommitCache": "sudo chown -R vscode:vscode /home/vscode/.cache/pre-commit",
-    "fixVolumeUvCache": "sudo chown -R vscode:vscode /home/vscode/.cache/uv"
+    "fixVolumeVenv": "sudo chown -R vscode:vscode .venv",
+    "fixVolumeCache": "sudo chown -R vscode:vscode .cache"
   },
 
-  "postStartCommand": "task init",
+  "postStartCommand": "just init"
 }

@@ -28,22 +28,24 @@ The output will look like this:
 The project is maintained by me, [trallnag](https://github.com/trallnag), and I
 am interested in keeping it alive as I am actively using it.
 
+I'm also using the project to test out various tools and workflows.
+
 ## Versioning
 
 The project follows [Semantic Versioning](https://semver.org/).
 
 ## Contributing
 
-Contributions are welcome. Please refer to [`CONTRIBUTE.md`](CONTRIBUTE.md).
+Contributions are welcome. Please refer to [`CONTRIBUTE.md`](./CONTRIBUTE.md).
 
 ## Licensing
 
 This work is licensed under the
 [ISC license](https://en.wikipedia.org/wiki/ISC_license). See
-[`LICENSE`](LICENSE) for the license text.
+[`LICENSE`](./LICENSE) for the license text.
 
 The license is also included in the script
-[`src/exec_cmds_defer_errors.py`](src/exec_cmds_defer_errors.py) itself.
+[`src/exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors.py) itself.
 
 ## Template
 

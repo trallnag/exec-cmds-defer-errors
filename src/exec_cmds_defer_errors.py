@@ -1,7 +1,5 @@
-#
-# /// script
-# requires-python = ">=3.10"
-# ///
+#!/usr/bin/env -S uv run --script
+
 #
 # This work is available under the ISC license.
 #
@@ -18,6 +16,16 @@
 # LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 # OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 # PERFORMANCE OF THIS SOFTWARE.
+#
+# /// script
+#
+# requires-python = ">= 3.12"
+#
+# dependencies = [
+#   "click == 8.1.8",
+# ]
+#
+# ///
 #
 
 import subprocess
