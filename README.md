@@ -10,14 +10,21 @@ Small Python script that executes given commands commands and defers errors.
 The standalone script is called `exec_cmds_defer_errors.py` and can be found
 [here](src/exec_cmds_defer_errors.py). The license is included in the file.
 
-Here is how it can be used:
+Here it is used to run three commands:
 
 ```sh
-python exec_cmds_defer_errors.py \
+uv run --script exec_cmds_defer_errors.py \
   'whoami | grep goatse' \
   'echo "hello world"' \
   'make love'
 ```
+
+Note that in the example the script is executed with `uv run`, a subcommand of
+[uv](https://docs.astral.sh/), which is a package manager for Python. This is
+because the script contains
+[inline script metadata](https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata)
+specifying required dependencies. The script also contains a shebang, so it can
+be executed directly.
 
 The output will look like this:
 

@@ -7,7 +7,11 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 ## Unreleased
 
-Nothing.
+### Changed
+
+- **BREAKING:** Complete rewrite of the script. While the interface did not
+  change, it now comes with inline script metadata and with that dependencies on
+  a third-party package.
 
 ## [1.0.1](https://github.com/trallnag/exec-cmds-defer-errors/compare/v1.0.0...v1.0.1) / 2025-01-22
 
