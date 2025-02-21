@@ -1,4 +1,4 @@
-_commit: v28
+_commit: v29
 _src_path: git@github.com:trallnag/copier-template-python-script.git
 project_name: exec-cmds-defer-errors
 script_name: exec_cmds_defer_errors
