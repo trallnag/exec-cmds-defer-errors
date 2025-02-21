@@ -3,7 +3,7 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/ci.yaml?label=ci)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/ci.yaml)
 [![release](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/release.yaml?label=release)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml)
 
-# `exec_cmds_defer_errors.py`
+# Exec-cmds-defer-errors
 
 Small Python script that executes given commands commands and defers errors.
 
@@ -32,8 +32,10 @@ The output will look like this:
 
 ## Project status
 
-The project is maintained by me, [trallnag](https://github.com/trallnag), and I
-am interested in keeping it alive as I am actively using it.
+The project is maintained by me, [Tim](https://github.com/trallnag), and I am
+interested in keeping it alive as I am actively using it.
+
+I'm also using the project to test out various tools and workflows.
 
 I'm also using the project to test out various tools and workflows.
 
@@ -52,7 +54,7 @@ This work is licensed under the
 [`LICENSE`](./LICENSE) for the license text.
 
 The license is also included in the script
-[`src/exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors.py) itself.
+[`exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors/exec_cmds_defer_errors.py) itself.
 
 ## Template
 

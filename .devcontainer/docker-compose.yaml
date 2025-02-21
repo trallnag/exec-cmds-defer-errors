@@ -13,11 +13,11 @@ services:
 
     volumes:
       # Workspace itself.
-      - ..:/workspaces/exec-cmds-defer-errors:cached
+      - ..:/workspaces/filter-pre-commit-hooks:cached
       # Virtual environment.
-      - venv:/workspaces/exec-cmds-defer-errors/.venv
+      - venv:/workspaces/filter-pre-commit-hooks/.venv
       # Workspace cache.
-      - cache:/workspaces/exec-cmds-defer-errors/.cache
+      - cache:/workspaces/filter-pre-commit-hooks/.cache
 
 volumes:
   venv: # Virtual environment.

@@ -18,15 +18,17 @@ VERSION=1.0.1
 ```
 
 Bump the version constants in [`pyproject.toml`](./pyproject.toml) and
-[`src/exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors.py):
+[`src/exec_cmds_defer_errors/exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors/exec_cmds_defer_errors.py):
 
 ```sh
-sed -i "s/^version = \".*\"/version = \"$VERSION\"/" pyproject.toml
-sed -i "s/^VERSION = \".*\"/VERSION = \"$VERSION\"/" src/exec_cmds_defer_errors.py
+sed --in-place "s/^version = \".*\"/version = \"$VERSION\"/" \
+  pyproject.toml
+sed --in-place "s/^VERSION = \".*\"/VERSION = \"$VERSION\"/" \
+  src/exec_cmds_defer_errors/exec_cmds_defer_errors.py
 uv sync
 ```
 
-Now make sure that [`CHANGELOG.md`](./CHANGELOG.md) is up-to-date.
+Make sure that [`CHANGELOG.md`](./CHANGELOG.md) is up-to-date.
 
 Adjust entries in the changelog for example by adding additional examples or
 highlighting breaking changes.
@@ -74,13 +76,15 @@ Push the tag itself:
 git push origin v$VERSION
 ```
 
-This triggers the release workflow which will build binaries, build and push
-container images, and draft a GitHub release. Monitor the
-[release workflow run](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml).
+This triggers the release workflow which will build package distributions,
+publish them to PyPI, and draft a GitHub release. Monitor the
+[release workflow](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml)
+run and check the
+[project on PyPI](https://pypi.org/project/exec-cmds-defer-errors/).
 
 ## Wrap up
 
-Go to the release page of this project on GitHub
+If everything is fine, go to the release page of this project on GitHub
 [here](https://github.com/trallnag/exec-cmds-defer-errors/releases) and review
 the automatically created release draft.
 

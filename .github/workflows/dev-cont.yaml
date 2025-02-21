@@ -10,12 +10,8 @@ on:
     paths:
       - .devcontainer/**
   schedule:
-    # At 04:15 on Monday.
-    - cron: 15 4 * * 1
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    # At 04:20 on Monday.
+    - cron: 20 4 * * 1
 
 defaults:
   run:

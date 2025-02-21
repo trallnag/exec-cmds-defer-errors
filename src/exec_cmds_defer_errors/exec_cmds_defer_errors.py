@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uv run --script
+#!/usr/bin/env -S uv run -s
 
 #
 # This work is available under the ISC license.
@@ -50,8 +50,7 @@ Every command is executed in its own shell.
 
 EPILOG = """
 \b
-For more information, check out
-<https://github.com/trallnag/filter-pre-commit-hooks>.
+Project homepage: <https://github.com/trallnag/filter-pre-commit-hooks>.
 """
 
 
