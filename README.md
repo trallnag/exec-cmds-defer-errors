@@ -54,7 +54,8 @@ This work is licensed under the
 [`LICENSE`](./LICENSE) for the license text.
 
 The license is also included in the script
-[`exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors/exec_cmds_defer_errors.py) itself.
+[`exec_cmds_defer_errors.py`](./src/exec_cmds_defer_errors/exec_cmds_defer_errors.py)
+itself.
 
 ## Template
 
