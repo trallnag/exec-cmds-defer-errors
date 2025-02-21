@@ -5,7 +5,10 @@ Integration tests for the `exec_cmds_defer_errors` module.
 import click
 from click.testing import CliRunner
 
-from src.exec_cmds_defer_errors import Command, exec_cmds_defer_errors
+from exec_cmds_defer_errors.exec_cmds_defer_errors import (
+    Command,
+    exec_cmds_defer_errors,
+)
 
 
 def test_cli_help() -> None:

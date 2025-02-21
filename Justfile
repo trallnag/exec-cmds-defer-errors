@@ -13,12 +13,17 @@ default: init fix check test
 # Initialize environment.
 init:
   # Create local-only directories.
-  mkdir -p .cache .local .venv tmp \
+  mkdir -p \
+    .cache \
     .cache/mypy \
     .cache/pytest \
-    .cache/ruff
+    .cache/ruff \
+    .local \
+    .tmp \
+    .venv
 
   # Check tool availability.
+  filter-pre-commit-hooks --version
   mdformat --version
   pre-commit --version
   shellcheck --version
@@ -105,4 +110,4 @@ test:
 # Sync dependencies from project config to script inline metadata.
 [group('misc')]
 sync-script-metadata:
-  ./scripts/sync-script-metadata.bash src/$SCRIPT_NAME.py
+  ./scripts/sync-script-metadata.bash src/$SCRIPT_NAME/$SCRIPT_NAME.py

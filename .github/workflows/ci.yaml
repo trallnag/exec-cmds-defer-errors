@@ -12,8 +12,8 @@ on:
     branches:
       - "*"
   schedule:
-    # At 04:04 on Monday.
-    - cron: 4 4 * * 1
+    # At 04:10 on Monday.
+    - cron: 10 4 * * 1
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,8 +24,8 @@ defaults:
     shell: bash
 
 jobs:
-  format-lint:
-    name: Format & Lint
+  fix-check:
+    name: Fix & Check
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -36,9 +36,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up just
-        uses: extractions/setup-just@v2
-
       - name: Set up uv
         uses: astral-sh/setup-uv@v5
 
@@ -48,9 +45,10 @@ jobs:
           python-version-file: pyproject.toml
 
       - name: Install tools with uv
-        run: >-
+        run: |
+          uv tool install filter-pre-commit-hooks
           uv tool install mdformat
-          && uv tool install pre-commit
+          uv tool install pre-commit
 
       - name: Cache pre-Commit cache
         uses: actions/cache@v4
