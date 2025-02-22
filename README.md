@@ -37,8 +37,6 @@ interested in keeping it alive as I am actively using it.
 
 I'm also using the project to test out various tools and workflows.
 
-I'm also using the project to test out various tools and workflows.
-
 ## Versioning
 
 The project follows [Semantic Versioning](https://semver.org/).
