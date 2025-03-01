@@ -28,7 +28,7 @@ be executed directly.
 
 The output will look like this:
 
-![screenshot.png](assets/screenshot.png)
+![screenshot.png](./assets/screenshot.png)
 
 ## Shell completion
 
