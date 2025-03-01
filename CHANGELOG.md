@@ -9,6 +9,12 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 Nothing.
 
+## [2.0.2](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.0.1...v2.0.2) / 2025-03-01
+
+### Changed
+
+- Added info about shell completion to documentation.
+
 ## [2.0.1](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.0.0...v2.0.1) / 2025-02-21
 
 ### Changed
