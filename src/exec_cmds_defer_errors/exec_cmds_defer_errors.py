@@ -30,6 +30,7 @@
 
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from typing import override
 
@@ -100,16 +101,25 @@ def exec_cmds_defer_errors(cmds: list[str]) -> None:
         click.secho(f"Executing command {index + 1}...", fg="blue")
         click.secho(cmd.strip(), fg="blue")
 
+        start_time = time.perf_counter()
+
         # Rule S602 disabled as running arbitrary code in shell is intended here.
         completed_proc = subprocess.run(cmd, shell=True, check=False)  # noqa: S602
 
+        elapsed_time = time.perf_counter() - start_time
+        elapsed_time_msg = f"Took {elapsed_time:.2f} seconds."
+
         if completed_proc.returncode == 0:
-            click.secho(f"Executed command {index + 1} successfully.", fg="green")
+            click.secho(
+                f"Executed command {index + 1} successfully. {elapsed_time_msg}",
+                fg="green",
+            )
         else:
             click.secho(
                 (
                     f"Executed command {index + 1} failed "
-                    f"with exit code {completed_proc.returncode}."
+                    f"with exit code {completed_proc.returncode}. "
+                    f"{elapsed_time_msg}"
                 ),
                 fg="red",
             )
