@@ -22,6 +22,10 @@ init:
     .tmp \
     .venv
 
+  # Set up mise environment.
+  mise --version
+  mise install
+
   # Check mise tool availability.
   mise exec -- exec-cmds-defer-errors --version
   mise exec -- filter-pre-commit-hooks --version
