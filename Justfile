@@ -56,7 +56,6 @@ update:
   mise upgrade --bump
 
   # Update pre-commit repositories and hooks.
-  pre-commit autoupdateories and hooks.
   pre-commit autoupdate
 
   # Update project deps managed with uv.
