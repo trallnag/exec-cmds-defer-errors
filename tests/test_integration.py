@@ -2,6 +2,8 @@
 Integration tests for the `exec_cmds_defer_errors` module.
 """
 
+import re
+
 import click
 from click.testing import CliRunner
 
@@ -80,5 +82,20 @@ def test_multiple_cmd_no_error() -> None:
     assert "All 2 commands executed successfully." in result.output
     assert "Executed command 1 successfully" in result.output
     assert "Executed command 2 successfully" in result.output
+
+    assert result.exit_code == 0
+
+
+def test_elapsed_time() -> None:
+    """
+    Test correct handling of elapsed time.
+    """
+
+    result = CliRunner().invoke(
+        exec_cmds_defer_errors,
+        ["sleep 0.1"],
+    )
+
+    assert re.search(r"Took 0\.1.* seconds\.", result.output)
 
     assert result.exit_code == 0
