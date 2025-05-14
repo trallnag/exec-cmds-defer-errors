@@ -1,7 +1,7 @@
 name: Release
 
 #
-# This workflow releases a new version of this project.
+# Releases a new version of this project.
 #
 # Make sure to prepare the project for a new release (see docs for more).
 #
@@ -57,7 +57,7 @@ jobs:
         uses: astral-sh/setup-uv@6b9c6063abd6010835644d4c2e1bef4cf5cd0fca # v6.0.1
         with:
           enable-cache: true
-          cache-suffix: test-release
+          cache-suffix: release
           cache-dependency-glob: |
             uv.lock
 
