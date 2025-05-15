@@ -16,7 +16,8 @@ Here it is used to run three commands:
 uv run --script exec_cmds_defer_errors.py \
   'whoami | grep goatse' \
   'echo "hello world"' \
-  'make love'
+  'make love' \
+  'sleep 1.5'
 ```
 
 Note that in the example the script is executed with `uv run`, a subcommand of
@@ -26,9 +27,27 @@ because the script contains
 specifying required dependencies. The script also contains a shebang, so it can
 be executed directly.
 
-The output will look like this:
+The output will look like this (but colored):
 
-![screenshot.png](./assets/screenshot.png)
+```txt
+Executing command 1...
+whoami | grep goatse
+Executed command 1 failed with exit code 1. Took 0.00 seconds.
+Executing command 2...
+echo "hello world"
+hello world
+Executed command 2 successfully. Took 0.00 seconds.
+Executing command 3...
+make love
+make: *** No rule to make target 'love'.  Stop.
+Executed command 3 failed with exit code 2. Took 0.00 seconds.
+Executing command 4...
+sleep 1.5
+Executed command 4 successfully. Took 1.50 seconds.
+2 out of 4 command(s) failed.
+Command 1 failed with exit code 1: whoami | grep goatse
+Command 3 failed with exit code 2: make lovew
+```
 
 ## Shell completion
 
