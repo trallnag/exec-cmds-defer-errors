@@ -64,7 +64,7 @@ wheels = [
 
 [[package]]
 name = "exec-cmds-defer-errors"
-version = "2.1.0"
+version = "2.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "click" },

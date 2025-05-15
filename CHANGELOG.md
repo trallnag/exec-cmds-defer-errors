@@ -9,6 +9,12 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 Nothing.
 
+## [2.1.1](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.1.0...v2.1.1) / 2025-05-15
+
+### Changed
+
+- In documentation, replaced image with text block.
+
 ## [2.1.0](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.0.2...v2.1.0) / 2025-05-15
 
 ### Added
