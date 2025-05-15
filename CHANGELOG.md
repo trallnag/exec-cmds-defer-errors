@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 ## Unreleased
 
+Nothing.
+
+## [2.1.0](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.0.2...v2.1.0) / 2025-05-15
+
 ### Added
 
 - Print elapsed time for each command.
