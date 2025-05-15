@@ -18,8 +18,10 @@ services:
     volumes:
       # Workspace itself.
       - ..:/workspaces/exec-cmds-defer-errors:cached
+
       # Virtual environment.
       - venv:/workspaces/exec-cmds-defer-errors/.venv
+
       # Workspace cache.
       - cache:/workspaces/exec-cmds-defer-errors/.cache
 
