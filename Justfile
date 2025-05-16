@@ -39,10 +39,10 @@ init:
   uv --version
 
   # Install pre-commit hooks.
-  pre-commit install --install-hooks
-  pre-commit install --install-hooks --hook-type commit-msg
-  pre-commit install --install-hooks --hook-type post-checkout
-  pre-commit install --install-hooks --hook-type post-merge
+  mise exec -- pre-commit install --install-hooks
+  mise exec -- pre-commit install --install-hooks --hook-type commit-msg
+  mise exec -- pre-commit install --install-hooks --hook-type post-checkout
+  mise exec -- pre-commit install --install-hooks --hook-type post-merge
 
   # Initialize project with uv.
   uv sync --all-extras --dev
