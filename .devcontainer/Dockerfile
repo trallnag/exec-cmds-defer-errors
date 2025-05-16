@@ -15,7 +15,6 @@ ARG APT_PKGS="\
 ARG BREW_PKGS="\
   cosign \
   gh \
-  go \
   jq \
   just \
   mise \
