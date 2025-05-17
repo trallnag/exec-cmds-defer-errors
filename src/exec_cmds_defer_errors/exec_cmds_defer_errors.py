@@ -22,7 +22,7 @@
 # requires-python = ">= 3.12"
 #
 # dependencies = [
-#   "click == 8.1.8",
+#   "click == 8.2.0",
 # ]
 #
 # ///
