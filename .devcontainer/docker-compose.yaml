@@ -19,19 +19,30 @@ services:
       # as uv cache lives on a different drive in this configuration.
       - UV_LINK_MODE=symlink
 
+      # Move the virtual environment out of the workspace to avoid conflicts.
+      - UV_PROJECT_ENVIRONMENT=/workspaces/exec-cmds-defer-errors-venv
+
     volumes:
       # Workspace itself.
       - ..:/workspaces/exec-cmds-defer-errors:cached
 
-      # Virtual environment.
-      - venv:/workspaces/exec-cmds-defer-errors/.venv
-
       # Workspace cache.
-      - cache:/workspaces/exec-cmds-defer-errors/.cache
+      - workspace-cache:/workspaces/exec-cmds-defer-errors/.cache:cached
+
+      # User cache.
+      - user-cache:/home/vscode/.cache:cached
+
+      # Mise data.
+      - mise-share:/home/vscode/.local/share/mise:cached
+
+      # Mise state.
+      - mise-state:/home/vscode/.local/state/mise:cached
 
 volumes:
-  venv: # Virtual environment.
-  cache: # Workspace cache.
+  workspace-cache: # Workspace cache.
+  user-cache: # User cache.
+  mise-share: # Mise data.
+  mise-state: # Mise state.
 
 secrets:
   github-token:

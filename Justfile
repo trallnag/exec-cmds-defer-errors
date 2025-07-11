@@ -15,12 +15,8 @@ init:
   # Create local-only directories.
   mkdir -p \
     .cache \
-    .cache/mypy \
-    .cache/pytest \
-    .cache/ruff \
     .local \
-    .tmp \
-    .venv
+    .tmp
 
   # Set up mise environment.
   mise --version
