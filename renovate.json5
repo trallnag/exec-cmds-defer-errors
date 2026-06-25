@@ -12,7 +12,6 @@
   minimumReleaseAge: '21 days',
   semanticCommits: 'enabled',
   prHourlyLimit: 10,
-  assigneesFromCodeOwners: true,
   lockFileMaintenance: {
     enabled: true,
   },
