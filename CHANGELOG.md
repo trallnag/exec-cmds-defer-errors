@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 ## Unreleased
 
+Nothing.
+
+## [2.1.2](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.1.1...v2.1.2) / 2026-06-28
+
 ### Changed
 
 - Updated dependencies.
