@@ -1,7 +1,9 @@
 [![status](https://img.shields.io/badge/status-active-brightgreen)](#project-status)
 [![release](https://img.shields.io/github/v/release/trallnag/exec-cmds-defer-errors)](https://github.com/trallnag/exec-cmds-defer-errors/releases)
+[![downloads](https://static.pepy.tech/personalized-badge/exec-cmds-defer-errors?period=monthly&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=BLUE&left_text=downloads%2Fmonth)](https://pepy.tech/projects/exec-cmds-defer-errors)
 [![ci](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/ci.yaml?label=ci)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/ci.yaml)
 [![release](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/release.yaml?label=release)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml)
+
 
 # Exec-cmds-defer-errors
 
