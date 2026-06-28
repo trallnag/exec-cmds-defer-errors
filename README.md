@@ -4,7 +4,6 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/ci.yaml?label=ci)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/ci.yaml)
 [![release](https://img.shields.io/github/actions/workflow/status/trallnag/exec-cmds-defer-errors/release.yaml?label=release)](https://github.com/trallnag/exec-cmds-defer-errors/actions/workflows/release.yaml)
 
-
 # Exec-cmds-defer-errors
 
 Small Python script that executes given commands commands and defers errors.
