@@ -50,7 +50,7 @@ git log --show-signature --max-count=1
 Push changes:
 
 ```sh
-git push origin master
+git push
 ```
 
 Check
