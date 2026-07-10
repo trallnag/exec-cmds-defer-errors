@@ -2,7 +2,7 @@
 
 name = "exec-cmds-defer-errors"
 
-description = ""
+description = "Small Python script that executes given commands and defers errors."
 
 authors = [
   {name = "Tim Schwenke", email = "tim@trallnag.com"},
@@ -14,10 +14,10 @@ license = "ISC"
 
 license-files = ["LICENSE"]
 
-requires-python = ">= 3.12"
+requires-python = ">=3.14"
 
 dependencies = [
-  "click ==8.4.2",
+  "click==8.4.2",
 ]
 
 readme = "README.md"
@@ -39,11 +39,11 @@ _exec-cmds-defer-errors = "exec_cmds_defer_errors.exec_cmds_defer_errors:exec_cm
 [dependency-groups]
 
 dev = [
-  "mypy >= 1.14.1",
-  "pytest-cov >= 6.0.0",
-  "pytest >= 8.3.4",
-  "ruff >= 0.8.4",
-  "types-pyyaml >= 6.0.12.20241230",
+  "mypy>=2.2.0",
+  "pytest-cov>=7.1.0",
+  "pytest>=9.1.1",
+  "ruff>=0.15.20",
+  "types-pyyaml>=6.0.12.20260518",
 ]
 
 [build-system]

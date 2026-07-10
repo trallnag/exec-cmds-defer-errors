@@ -19,10 +19,10 @@
 #
 # /// script
 #
-# requires-python = ">= 3.12"
+# requires-python = ">=3.14"
 #
 # dependencies = [
-#   "click ==8.4.2",
+#   "click==8.4.2",
 # ]
 #
 # ///
