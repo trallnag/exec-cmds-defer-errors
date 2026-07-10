@@ -109,7 +109,7 @@ wheels = [
 
 [[package]]
 name = "exec-cmds-defer-errors"
-version = "2.1.2"
+version = "3.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "click" },

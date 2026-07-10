@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
 ## Unreleased
 
+Nothing.
+
+## [3.0.0](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.1.2...v3.0.0) / 2026-07-10
+
 ### Changed
 
 - **BREAKING:** Bumped required version of Python from 3.12 to 3.14.

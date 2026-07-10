@@ -36,7 +36,7 @@ from typing import override
 
 import click
 
-VERSION = "2.1.2"
+VERSION = "3.0.0"
 
 HELP = """
 Execute commands and defer errors.
