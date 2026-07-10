@@ -25,5 +25,6 @@ specified in the lock file.
 
 This project is based on the following
 [Copier](https://copier.readthedocs.io/en/stable/) template:
-<https://github.com/trallnag/copier-template-python-script>. Consider updating
-things in the template repository as well.
+<https://github.com/trallnag/copier-template-python-script>.
+
+Consider updating things in the template repository as well.

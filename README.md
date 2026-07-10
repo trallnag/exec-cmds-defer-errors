@@ -6,7 +6,7 @@
 
 # Exec-cmds-defer-errors
 
-Small Python script that executes given commands commands and defers errors.
+Small Python script that executes given commands and defers errors.
 
 The standalone script is called `exec_cmds_defer_errors.py` and can be found
 [here](src/exec_cmds_defer_errors.py). The license is included in the file.
@@ -47,7 +47,7 @@ sleep 1.5
 Executed command 4 successfully. Took 1.50 seconds.
 2 out of 4 command(s) failed.
 Command 1 failed with exit code 1: whoami | grep goatse
-Command 3 failed with exit code 2: make lovew
+Command 3 failed with exit code 2: make love
 ```
 
 ## Shell completion
