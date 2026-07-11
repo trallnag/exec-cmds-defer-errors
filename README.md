@@ -52,7 +52,7 @@ Command 3 failed with exit code 2: make love
 
 ## Shell completion
 
-This program uses [Click](https://click.palletsprojects.com/en/stable/) for the
+This script uses [Click](https://click.palletsprojects.com/en/stable/) for the
 CLI. Click provides automatically generated shell completion for Bash, Fish, and
 Zsh. Check out the official documentation
 [here](https://click.palletsprojects.com/en/stable/shell-completion/).
