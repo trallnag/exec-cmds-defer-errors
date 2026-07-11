@@ -2,7 +2,7 @@
 
 name = "exec-cmds-defer-errors"
 
-description = "Small Python script that executes given commands and defers errors."
+description = "Execute given commands and defer errors."
 
 authors = [
   {name = "Tim Schwenke", email = "tim@trallnag.com"},
