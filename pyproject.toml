@@ -78,6 +78,7 @@ ignore = [
   "EXE003",  # Python script with uv shebang is fine.
   "INP001",  # Implicit namespace package is fine.
   "ISC001",  # Redundant rule. Ruff recommends disabling it.
+  "TC003",   # No need to specially handle type imports.
 ]
 
 [tool.ruff.lint.extend-per-file-ignores]
