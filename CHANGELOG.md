@@ -14,12 +14,13 @@ Nothing.
 ### Changed
 
 - **BREAKING:** Bumped required version of Python from 3.12 to 3.14.
+- Updated required versions of dependencies.
 
 ## [2.1.2](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.1.1...v2.1.2) / 2026-06-28
 
 ### Changed
 
-- Updated dependencies.
+- Updated required versions of dependencies.
 
 ## [2.1.1](https://github.com/trallnag/exec-cmds-defer-errors/compare/v2.1.0...v2.1.1) / 2025-05-15
 
