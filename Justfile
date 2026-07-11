@@ -28,7 +28,6 @@ init: handle-tokens
   # Create local-only directories.
   mkdir -p \
     .cache \
-    .local \
     .tmp
 
   # Set up mise environment.
